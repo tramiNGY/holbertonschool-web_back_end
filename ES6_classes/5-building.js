@@ -19,8 +19,7 @@ export default class Building {
   }
 
   evacuationWarningMessage() {
-    if (this.constructor === Building) {
-      throw new TypeError('Class extending Building must override evacuationWarningMessage');
-    }
+    console.log(this);
+    throw new TypeError('Class extending Building must override evacuationWarningMessage');
   }
 }
