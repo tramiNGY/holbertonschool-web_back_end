@@ -7,5 +7,9 @@ export default function cleanSet(set, startString) {
     .map((item) => item.slice(startString.length))
     .join('-');
 
-  return result || '';
+  if (result === '') {
+    return '';
+  }
+
+  return result;
 }
