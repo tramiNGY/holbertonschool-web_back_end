@@ -2,12 +2,9 @@ export default function cleanSet(set, startString) {
   if (startString === '') {
     return '';
   }
-  const filtereditems = [...set]
+  const result = Array.from(set)
     .filter((item) => item.startsWith(startString))
     .map((item) => item.slice(startString.length));
 
-  if (filtereditems.length === 0) {
-    return '';
-  }
-  return filtereditems.join('-');
+  return result.join('-');
 }
