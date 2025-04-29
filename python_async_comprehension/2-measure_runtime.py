@@ -9,7 +9,7 @@ import time
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-async def measure_runtime():
+async def measure_runtime() -> float:
     """Run time for four parallel comprehensions"""
     start_time = time.time()
     tasks = [async_comprehension() for i in range(4)]
