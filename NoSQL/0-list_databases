@@ -1,0 +1,2 @@
+#!/usr/bin/mongosh
+show dbs
