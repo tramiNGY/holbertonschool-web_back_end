@@ -4,6 +4,9 @@
 
 MongoDB is a NoSQL database that uses a document-based model to store data. Instead of using tables like relational databases, MongoDB stores data in flexible, JSON-like documents. This structure makes it easier to store and retrieve data that doesn’t fit neatly into the rigid structure of a table.
 
+## Installation guide
+https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
 ### Why Use MongoDB?
 
 - **Flexibility:** MongoDB’s document model allows you to store data with varying structures.
