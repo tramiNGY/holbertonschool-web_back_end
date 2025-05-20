@@ -1,0 +1,12 @@
+*.swp
+**/node_modules/
+**/package-lock.json
+**/.eslintrc.js
+**/babel.config.js
+**/*.test.js
+*.zip
+ES6_basic/
+ES6_classes/
+ES6_data_manipulation/
+ES6_promise/
+NoSQL/
