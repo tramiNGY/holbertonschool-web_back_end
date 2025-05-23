@@ -1,4 +1,4 @@
-import { readDatabase } from '../utils';
+import readDatabase from '../utils';
 
 class StudentsController {
   static getAllStudents(req, res) {
@@ -7,7 +7,9 @@ class StudentsController {
     readDatabase(filePath)
       .then((data) => {
         let response = 'This is the list of our students';
-        const fields = Object.keys(data).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+        const fields = Object.keys(data).sort(
+          (a, b) => a.toLowerCase().localeCompare(b.toLowerCase()),
+        );
         for (const field of fields) {
           const list = data[field];
           response += `\nNumber of students in ${field}: ${list.length}. List: ${list.join(', ')}`;
