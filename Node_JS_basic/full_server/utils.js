@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-export function readDatabase(filePath) {
+function readDatabase(filePath) {
   return new Promise((resolve, reject) => {
     fs.readFile(filePath, 'utf-8', (err, data) => {
       if (err) {
@@ -15,19 +15,21 @@ export function readDatabase(filePath) {
       }
 
       const students = {};
-      for (let i = 1; i < lines.length; i++) {
+      for (let i = 1; i < lines.length; i += 1) {
         const line = lines[i].trim();
-        if (!line) continue;
+        if (line) {
+          const parts = line.split(',');
+          const field = parts[3];
+          const firstname = parts[0];
 
-        const parts = line.split(',');
-        const field = parts[3];
-        const firstname = parts[0];
-
-        if (!students[field]) students[field] = [];
-        students[field].push(firstname);
+          if (!students[field]) students[field] = [];
+          students[field].push(firstname);
+        }
       }
 
       resolve(students);
     });
   });
 }
+
+export default readDatabase;
